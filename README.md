@@ -105,29 +105,25 @@ Visualization:
 ---
 
 ## 🧩 7. Cấu trúc thư mục dự án
-Digit-Classification/
-Digit-Classification/
-│
+digits_classification/
 ├── configs/
-│ └── config.yaml # File cấu hình chung (learning rate, batch size, epoch, đường dẫn,…)
+│ └── config.yaml
 │
 ├── src/
-│ ├── data/
-│ │ └── dataloader.py # Định nghĩa lớp Dataset và DataLoader cho MNIST
-│ │
 │ ├── losses/
-│ │ └── loss.py # Định nghĩa hàm mất mát (Loss Function) – ví dụ CrossEntropyLoss
+│ │ └── loss.py
 │ │
 │ ├── models/
-│ │ └── model.py # Khai báo mô hình mạng (FCNN / CNN)
+│ │ └── model.py
 │ │
-│ ├── trainer.py # Vòng lặp huấn luyện (training loop) và đánh giá (evaluation)
-│ │
-│ ├── requirements.txt # Danh sách thư viện cần thiết
-│ └── README.md # Mô tả chi tiết dự án
+│ └── data/
+│ └── dataloader.py
 │
-└── configs/
-└── config.yaml # Thông số cấu hình (ví dụ: learning_rate, num_epochs, batch_size)
+├── trainer.py
+│
+├── requirements.txt
+│
+└── README.md
 
 ---
 
