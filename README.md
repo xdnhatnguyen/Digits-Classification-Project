@@ -1,9 +1,9 @@
 # 🧠 Digit Classification using PyTorch (MNIST Dataset)
 
-### 📘 Course Project – Class 25CTT3
-**Team: HCMUS-ConChoCaoBangBoPC, Class 25CTT3B – Faculty of Information Technology - HCMUS
-**Team Members:** 6 students.
-**Framework:** PyTorch  
+### 📘 Course Project – Class 25CTT3B - Faculty of Information Technology - HCMUS  
+**Team:** HCMUS-ConChoCaoBangBoPC  
+**Team Members:** 6 students  
+**Framework:** NumPy, Matplotlib, PyTorch  
 **Dataset:** MNIST Handwritten Digits  
 **Language:** Python  
 
@@ -105,25 +105,27 @@ Visualization:
 ---
 
 ## 🧩 7. Cấu trúc thư mục dự án
+```
 digits_classification/
 ├── configs/
-│ └── config.yaml
+│   └── config.yaml
 │
 ├── src/
-│ ├── losses/
-│ │ └── loss.py
-│ │
-│ ├── models/
-│ │ └── model.py
-│ │
-│ └── data/
-│ └── dataloader.py
+│   ├── losses/
+│   │   └── loss.py
+│   │
+│   ├── models/
+│   │   └── model.py
+│   │
+│   └── data/
+│       └── dataloader.py
 │
 ├── trainer.py
 │
 ├── requirements.txt
 │
 └── README.md
+```
 
 ---
 
@@ -138,8 +140,9 @@ Huấn luyện mô hình:
 python src/train.py
 ```
 Kiểm thử mô hình:
+```bash
 python src/test.py
-
+```
 💡 9. Kết luận & Hướng phát triển
 
 
@@ -149,12 +152,12 @@ python src/test.py
 👨‍💻 10. Thành viên nhóm 25CTT3
 | STT | Họ và Tên | Vai trò                        |
 | --- | --------- | ------------------------------ |
-| 1   | ...       | Công việc 1                    |
-| 2   | ...       | Công việc 2                    |
-| 3   | ...       | Công việc 3                    |
-| 4   | ...       | Công việc 4                    |
-| 5   | ...       | Công việc 5                    |
-| 6   | ...       | Công việc 6                    |
+| 1   | Nhật        | Công việc 1                    |
+| 2   | Phong       | Công việc 2                    |
+| 3   | Quang       | Công việc 3                    |
+| 4   | Quang       | Công việc 4                    |
+| 5   | Quang       | Công việc 5                    |
+| 6   | Quang       | Công việc 6                    |
 
 
 
