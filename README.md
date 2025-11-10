@@ -80,8 +80,8 @@ Hai mô hình được thử nghiệm trong dự án:
 
 ---
 
-## 🔄 5. Quy trình thực hiện
-
+## 🔄 5. Quy trình thực hiện và phân công
+[comment]: # (### Quy trình: 
 | Giai đoạn | Nội dung chính |
 |------------|----------------|
 | **Tuần 1** | Tìm hiểu bài toán, dataset MNIST, cài đặt PyTorch |
@@ -89,7 +89,9 @@ Hai mô hình được thử nghiệm trong dự án:
 | **Tuần 3** | Xây dựng mô hình FCNN, train thử và hiển thị kết quả |
 | **Tuần 4** | Nâng cấp lên CNN, thử nghiệm tham số (batch size, epoch, lr) |
 | **Tuần 5** | Đánh giá mô hình, trình bày báo cáo, chuẩn bị demo |
-
+)
+### Giản đồ Gantt:  
+![Quy trình thực hiện và phân công](https://raw.githubusercontent.com/xdnhatnguyen/Digits-Classification-Project/main/GanttChart.png)
 ---
 
 ## 📊 6. Kết quả dự kiến
@@ -105,7 +107,7 @@ Visualization:
 ---
 
 ## 🧩 7. Cấu trúc thư mục dự án
-```
+```bash
 digits_classification/
 ├── configs/
 │   └── config.yaml
@@ -150,14 +152,14 @@ python src/test.py
 
 
 👨‍💻 10. Thành viên nhóm 25CTT3
-| STT | Họ và Tên | Vai trò                        |
+| STT | Họ và Tên | MSSV                           |
 | --- | --------- | ------------------------------ |
-| 1   | Nhật        | Công việc 1                    |
-| 2   | Phong       | Công việc 2                    |
-| 3   | Quang       | Công việc 3                    |
-| 4   | Quang       | Công việc 4                    |
-| 5   | Quang       | Công việc 5                    |
-| 6   | Quang       | Công việc 6                    |
+| 1   | Nhật        | 25120xxx                     |
+| 2   | Phong       | 25120xxx                     |
+| 3   | Quang       | 25120xxx                     |
+| 4   | Quang       | 25120xxx                     |
+| 5   | Quang       | 25120xxx                     |
+| 6   | Quang       | 25120xxx                     |
 
 
 
