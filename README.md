@@ -81,16 +81,8 @@ Hai mô hình được thử nghiệm trong dự án:
 ---
 
 ## 🔄 5. Quy trình thực hiện và phân công
-[comment]: # (### Quy trình: 
-| Giai đoạn | Nội dung chính |
-|------------|----------------|
-| **Tuần 1** | Tìm hiểu bài toán, dataset MNIST, cài đặt PyTorch |
-| **Tuần 2** | Ôn lại kiến thức toán nền và Python cơ bản |
-| **Tuần 3** | Xây dựng mô hình FCNN, train thử và hiển thị kết quả |
-| **Tuần 4** | Nâng cấp lên CNN, thử nghiệm tham số (batch size, epoch, lr) |
-| **Tuần 5** | Đánh giá mô hình, trình bày báo cáo, chuẩn bị demo |
-)
-### Giản đồ Gantt:  
+
+### Giản đồ **Gantt**:  
 ![Quy trình thực hiện và phân công](https://raw.githubusercontent.com/xdnhatnguyen/Digits-Classification-Project/main/GanttChart.png)
 ---
 
