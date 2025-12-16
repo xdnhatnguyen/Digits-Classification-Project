@@ -24,3 +24,17 @@ class CNN(nn.Module):
         x = F.dropout(x, training=self.training, p=0.5) #p = Probability dropout: tắt 50%
         x = self.fc2(x)
         return x #Dùng CrossEntropyLoss
+class MLP(nn.Module):
+    def __init__(self, num_classes=10):
+        super().__init__()
+        self.model = nn.Sequential(
+            nn.Flatten(),
+            nn.Linear(28*28, 256),
+            nn.ReLU(),
+            nn.Linear(256, 128),
+            nn.ReLU(),
+            nn.Dropout(0.2),
+            nn.Linear(128, num_classes)
+        )
+    def forward(self, x):
+      return self.model(x)
