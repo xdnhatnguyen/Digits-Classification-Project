@@ -1,4 +1,9 @@
-torch==2.3.0
-numpy==1.26.4
+torch
+torchinfo
+torchvision
+numpy
 tqdm
 omegaconf
+seaborn
+gradio
+opencv-python
