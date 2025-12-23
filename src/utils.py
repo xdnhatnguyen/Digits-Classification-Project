@@ -25,7 +25,7 @@ def plot_graph(list_1, list_2, name_1, name_2, title):
     
     # Plot Accuracy (Blue line)
     ax2.set_ylabel(name_2, color='tab:blue')  
-    ax2.plot(x_2, list_2, color='tab:blue', marker='o', label=name_2)
+    ax2.plot(x_2, list_2, color='tab:blue', label=name_2)
     ax2.tick_params(axis='y', labelcolor='tab:blue')
 
     # 3. Final touches
