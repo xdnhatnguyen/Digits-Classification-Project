@@ -1,160 +1,78 @@
-# 🧠 Digit Classification using PyTorch (MNIST Dataset)
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![Python](https://img.shields.io/badge/python-3.8+-blue.svg?style=for-the-badge&logo=python&logoColor=white) ![License](https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge)
 
-### 📘 Course Project – Class 25CTT3B - Faculty of Information Technology - HCMUS  
-**Team:** HCMUS-ConChoCaoBangBoPC  
-**Team Members:** 6 students  
-**Framework:** NumPy, Matplotlib, PyTorch  
-**Dataset:** MNIST Handwritten Digits  
-**Language:** Python  
+This project implements and compares the performance of Deep Learning models (MLP & CNN) for handwritten digit recognition using the MNIST dataset. The project is built with a modular architecture, designed for extensibility and academic research purposes.
 
 ---
 
-## 📍 1. Giới thiệu dự án
+## 📄 Documentation & Paper
 
-Đây là dự án học tập nhằm tìm hiểu và xây dựng mô hình **nhận diện chữ số viết tay (Digit Classification)** sử dụng **PyTorch** và **bộ dữ liệu MNIST**.
+The project is accompanied by a detailed scientific report, providing an in-depth analysis of the mathematical foundations and empirical evaluation.
 
-Mục tiêu của dự án:
-- Hiểu rõ **quy trình huấn luyện mô hình học máy (Machine Learning pipeline)**.  
-- Làm quen với **xử lý dữ liệu ảnh, xây dựng mạng nơ-ron (Neural Network)**.  
-- Ứng dụng các kiến thức nền tảng về **toán học, tối ưu và lập trình Python** vào thực tế.  
-
-Kết quả mong muốn:
-- Huấn luyện thành công mô hình có **độ chính xác ≥ 95%** trên tập kiểm thử MNIST.
+👉 **[Read the full report (PDF)](./article_paper.pdf)**
 
 ---
 
-## 🧩 2. Mô tả bài toán
+## ✨ Key Features
 
-**Bài toán:**  
-Cho một ảnh viết tay kích thước **28×28 pixel**, dự đoán chữ số (0–9) mà ảnh biểu diễn.
+* **Modular Architecture:** Clear separation between Data Loading, Model, Loss function, and Training loop.
+* **Multi-Architecture Support:**
+    * **MLP (Multi-layer Perceptron):**Fully Connected Neural Network, Basic Feed-Forward Network (Baseline).
+    * **CNN (Convolutional Neural Network):** Convolutional network optimized for spatial feature extraction.
+* **Reproducibility:** Hyperparameter management via `yaml` configuration files.
+* **Logging & Visualization:** Real-time loss/accuracy tracking and prediction visualization.
 
-**Đầu vào (Input):**  
-Ảnh grayscale 28×28, mỗi pixel ∈ [0, 255].
+## 📅 Project Timeline and Team Members (HCMUS-ConChoCaoBangBoPC)
 
-**Đầu ra (Output):**  
-Một vector xác suất gồm 10 phần tử tương ứng các lớp số (0–9).  
-Lớp có xác suất cao nhất được chọn làm kết quả dự đoán.
+Below is the implementation progress and task distribution of the team throughout the development process:
 
----
+![Gantt Chart](./assets/Gantt.png)
 
-## 🧠 3. Kiến thức và nền tảng sử dụng
+## 📂 Project Structure
 
-### 🔹 Machine Learning / Deep Learning
-- **Phân loại (Classification)** là một trong những bài toán cơ bản của học máy.  
-- Sử dụng mô hình **Neural Network (NN)** và **Convolutional Neural Network (CNN)**.  
-- Huấn luyện bằng thuật toán **Gradient Descent** và hàm mất mát **Cross-Entropy Loss**.
-
-### 🔹 Toán học nền tảng
-| Mảng | Ứng dụng trong dự án |
-|------|----------------------|
-| **Đại số tuyến tính** | Biểu diễn ảnh và phép nhân ma trận trong mạng nơ-ron |
-| **Giải tích (Đạo hàm)** | Cập nhật trọng số mô hình thông qua Gradient Descent |
-| **Xác suất – Thống kê** | Hiểu xác suất dự đoán (Softmax) và đánh giá mô hình |
-
-### 🔹 Python và PyTorch
-- **Python**: Sử dụng cơ bản về `list`, `dict`, `for`, `class`, hàm.  
-- **PyTorch core:**
-  - `torch.Tensor`, `torch.autograd`
-  - `torch.nn.Module`, `torch.nn.Sequential`
-  - `torch.optim` (SGD, Adam)
-  - `torchvision.datasets.MNIST`, `DataLoader`, `transforms`
-- **Thư viện bổ trợ:** `numpy`, `matplotlib`, `torchvision`
-
----
-
-## ⚙️ 4. Kiến trúc mô hình
-
-Hai mô hình được thử nghiệm trong dự án:
-
-### **1️⃣ Fully Connected Neural Network (FCNN)**
-- Lớp ẩn: 128 neurons, kích hoạt ReLU  
-- Lớp đầu ra: 10 neurons, kích hoạt Softmax  
-- Loss: CrossEntropyLoss  
-- Optimizer: SGD / Adam  
-
-### **2️⃣ Convolutional Neural Network (CNN)**
-- `Conv2d(1, 32, 3)` → `ReLU` → `MaxPool2d(2)`  
-- `Conv2d(32, 64, 3)` → `ReLU` → `MaxPool2d(2)`  
-- `Linear(64*5*5, 128)` → `ReLU` → `Linear(128, 10)`  
-- Cho độ chính xác cao hơn rõ rệt so với FCNN.
-
----
-
-## 🔄 5. Quy trình thực hiện và phân công
-
-### Giản đồ **Gantt**:  
-![Quy trình thực hiện và phân công](https://raw.githubusercontent.com/xdnhatnguyen/Digits-Classification-Project/main/GanttChart.png)
----
-
-## 📊 6. Kết quả dự kiến
-| Mô hình | Độ chính xác huấn luyện | Độ chính xác kiểm thử |
-|----------|--------------------------|------------------------|
-| FCNN | ~92–94% | ~91–93% |
-| CNN | ~98–99% | ~97–98% |
-
-Visualization:
-- Biểu đồ loss/accuracy theo epoch.  
-- Một số ảnh test kèm dự đoán mô hình.
-
----
-
-## 🧩 7. Cấu trúc thư mục dự án
 ```bash
 digits_classification/
-├── configs/
-│   └── config.yaml
-│
-├── src/
-│   ├── losses/
-│   │   └── loss.py
-│   │
-│   ├── models/
-│   │   └── model.py
-│   │
-│   └── data/
-│       └── dataloader.py
-│
-├── trainer.py
-│
-├── requirements.txt
-│
-└── README.md
-```
-
----
-
-## 🧰 8. Cách chạy dự án
-
-### Cài đặt môi trường:
+├── configs/            # Configuration files
+│   └── config.yaml     # Main config (Epochs, LR, Model type...)
+├── assets/             # Image files
+│   └── GanttChart.png
+├── src/                # Source code
+│   ├── data/           # Data processing module (DataLoader, Transforms)
+│   ├── models/         # Model architecture definitions (CNN, MLP)
+│   ├── losses/         # Loss functions
+│   └── utils/          # Utilities (Visualization, Logger)
+├── saved_models/       # Directory for saving trained model weights
+├── article_paper.pdf   # Scientific report file
+├── trainer.py          # Training script
+├── test.py             # Testing/Evaluation script
+├── requirements.txt    # Project dependencies
+└── README.md           # Project documentation
+```  
+## 🚀 Installation & Usage  
+### 1. Environment Setup  
+Requires Python 3.8+.
 ```bash
-pip install torch torchvision matplotlib numpy
+# Clone repository
+git clone [https://github.com/username/digits-classification.git](https://github.com/username/digits-classification.git)
+cd digits-classification
+
+# Create virtual environment (Recommended)
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# venv\Scripts\activate   # Windows
+
+# Install dependencies
+pip install -r requirements.txt
 ```
-Huấn luyện mô hình:
+### 2. Training  
+You can modify parameters in ```configs/config.yaml``` before running.
+```
+python trainer.py --config configs/config.yaml
+```
+The model with the highest accuracy will be automatically saved to ```saved_models/```.  
+### 3. Testing:  
+Evaluate the model on the Test set:
 ```bash
-python src/train.py
+python test.py --model_path saved_models/best_model.pth
 ```
-Kiểm thử mô hình:
-```bash
-python src/test.py
-```
-💡 9. Kết luận & Hướng phát triển
-
-
-/---/
-
-
-👨‍💻 10. Thành viên nhóm 25CTT3
-| STT | Họ và Tên | MSSV                           |
-| --- | --------- | ------------------------------ |
-| 1   | Nhật        | 25120xxx                     |
-| 2   | Phong       | 25120xxx                     |
-| 3   | Quang       | 25120xxx                     |
-| 4   | Quang       | 25120xxx                     |
-| 5   | Quang       | 25120xxx                     |
-| 6   | Quang       | 25120xxx                     |
-
-
-
----
-
-
+## 📝 License
+This project is distributed under the MIT license.
