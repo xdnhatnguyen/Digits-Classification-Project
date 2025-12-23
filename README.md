@@ -25,7 +25,7 @@ The project is accompanied by a detailed scientific report, providing an in-dept
 
 Below is the implementation progress and task distribution of the team throughout the development process:
 
-![Gantt Chart](./assets/Gantt.png)
+![Gantt Chart](./Gantt.png)
 
 ## 📂 Project Structure
 
@@ -76,3 +76,4 @@ python test.py --model_path saved_models/best_model.pth
 ```
 ## 📝 License
 This project is distributed under the MIT license.
+
