@@ -82,9 +82,9 @@ python test.py --model_path saved_models/best_model.pth
 ---
 ## 👥 Researchers:
 
-### HCMUS - GROUP THỢ ĐIỆN VIẾT CODE - 25CTT3
+### HCMUS - CONCHOCAOBANGBOPC - 25CTT3
 
-| Thành viên | MSSV |
+| Members | StudentID |
 | :--- | :--- |
 | Trần Trung Hậu | 2510215 |
 | Vũ Thanh Phong | 25120219 |
@@ -93,7 +93,7 @@ python test.py --model_path saved_models/best_model.pth
 | Nguyễn Vũ Nhật Quang | 25120225 |
 | Phạm Đăng Quang | 25120226 |
 
-Giảng viên hướng dẫn thực hành: Thầy Lê Đức Khoan.
+Lab Instructor: Thầy Lê Đức Khoan.
 
 ---
 
