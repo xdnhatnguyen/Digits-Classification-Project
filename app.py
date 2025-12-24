@@ -5,35 +5,42 @@ import numpy as np
 import cv2
 
 # FIX 1: Import your actual model class
-from src.model import CNN  
+from src.model import MLP, CNN  
 
 # LOAD MODEL
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # Ensure this path matches exactly where main.py saved it
-MODEL_PATH = 'model/mnist_CNN.pt' 
-model = CNN().to(DEVICE)
+MODEL_PATHS = ["model/mnist_MLP.pt","model/mnist_CNN.pt"]
+models = [MLP().to(DEVICE), CNN().to(DEVICE)]
 
-def load_pytorch_model_from_file():
+def load_pytorch_model_from_file(idx):
     try:
  
         # FIX 3: Uncomment this to actually load the trained weights!
         # If you leave this commented out, you are predicting with a random, empty model.
-        model.load_state_dict(torch.load(MODEL_PATH, map_location=DEVICE))
+        models[idx].load_state_dict(torch.load(MODEL_PATHS[idx], map_location=DEVICE))
         
-        model.eval()
-        print(f"✅ Successfully loaded model from {MODEL_PATH}")
-        return model
+        models[idx].eval()
+        print(f"✅ Successfully loaded model from {MODEL_PATHS[idx]}")
+        return models[idx]
     except Exception as e:
         print(f"⚠️ Error loading model: {e}")
         return None
 
 # --- LOGIC XỬ LÝ BIẾN MODEL ---
-model = load_pytorch_model_from_file()
+models = [load_pytorch_model_from_file(idx) for idx in range(2)]
 
 # ==========================================
 # HÀM XỬ LÝ ẢNH & DỰ ĐOÁN
 # ==========================================
-def predict_digit(image):
+def predict_digit(image, model_name):
+
+    idx = 0
+    if model_name == "CNN Model":
+        idx = 1
+    else:
+        idx = 0
+
     # Handle Gradio 4.x dictionary input
     if isinstance(image, dict):
         image = image['composite']
@@ -60,9 +67,9 @@ def predict_digit(image):
     image_tensor = image_tensor.to(DEVICE)
 
     # 2. Inference
-    if model:
+    if models[idx]:
         with torch.no_grad():
-            output = model(image_tensor)
+            output = models[idx](image_tensor)
             probabilities = F.softmax(output, dim=1)
             prob_arr = probabilities.cpu().numpy()[0]
 
@@ -75,9 +82,9 @@ def predict_digit(image):
 # ==========================================
 demo = gr.Interface(
     fn=predict_digit,
-    inputs=gr.Sketchpad(label="Draw a digit"),
+    inputs=[gr.Sketchpad(label="Draw a digit"), gr.Radio(["MLP Model", "CNN Model"], label="Choose model")],
     outputs=gr.Label(num_top_classes=3, label="Prediction"),
-    title="HCMUS-ConChoCaoBangBoPC: AI Digit Recognizer",
+    title="HCMUS-ConChoCaoBangBoPC: The World's number one AI Digit Recognizer",
     live=True
 )
 

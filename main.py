@@ -43,22 +43,26 @@ def trainModel(model, model_name):
 
     loaders = src.dataloader.getLoaders()
 
-    """ LẶP HUẤN LUYỆN MÔ HÌNH CNN """
+    """ LẶP HUẤN LUYỆN MÔ HÌNH """
 
-    EPOCHS = 5
-    for epoch in range(1, 6):
+    yaml_data = src.utils.get_data_from_config()
+
+    EPOCHS = int(yaml_data["NUM_EPOCHS"])
+    for epoch in range(1, EPOCHS + 1):
         print(f"Training {model_name} model: Epoch", epoch, "...")
         running_loss_list.extend(src.trainer.train(model=CNN_model,
-                                loaders=loaders,
-                                epoch=epoch,
-                                optimizer=optimizer,
-                                loss_fn=loss_fn,
-                                device=device))
+                                                   loaders=loaders,
+                                                   epoch=epoch,
+                                                   optimizer=optimizer,
+                                                   loss_fn=loss_fn,
+                                                   device=device)
+                                )
         accuracy.extend(src.trainer.valid(model=CNN_model,
-                                        loaders=loaders,
-                                        device=device,
-                                        loss_fn=loss_fn,
-                                        confusion_matrix=confusion_matrix))
+                                          loaders=loaders,
+                                          device=device,
+                                          loss_fn=loss_fn,
+                                          confusion_matrix=confusion_matrix)
+                        )
         
     """ LƯU MÔ HÌNH """
     save_path = f"model/mnist_{model_name}.pt"
@@ -87,7 +91,7 @@ if __name__ == "__main__":
                          title="Loss over time",
                          x_label_name="50-batches")
     
-    """ IN RA KẾT QUẢ HUẤN LUYỆN MÔ HÌNH CNN """ 
+    """ IN RA KẾT QUẢ HUẤN LUYỆN CỦA HAI MÔ HÌNH """ 
     src.utils.plot_graph(list_1=eval_data[0][1],
                          list_2=eval_data[1][1],
                          name_1="MLP Model",
@@ -95,7 +99,7 @@ if __name__ == "__main__":
                          title="Accuracy over time",
                          x_label_name="Epoch")
 
-    """ IN RA BẢNG CONFUSION CỦA MÔ HÌNH """
+    """ IN RA BẢNG CONFUSION CỦA HAI MÔ HÌNH """
     src.utils.plot_confusion_matrix(cm_tensor=src.utils.eval_model_correctness(eval_data[0][2]),
                                     classesX=['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', "Macro"],
                                     classesY=["TP", "FP", "FN", "Precision", "Recall", "F1-Score"], fmt='.3f',

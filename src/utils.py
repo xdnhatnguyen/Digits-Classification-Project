@@ -1,7 +1,13 @@
-import torch
+import torch, yaml
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+from pathlib import Path
+
+def get_data_from_config():
+    with open(Path(__file__).parent.parent / "configs" / "config.yaml", "r") as f:
+        yaml_string = f.read()
+    return yaml.safe_load(yaml_string)
 
 def plot_graph(list_1, list_2, name_1, name_2, title, x_label_name = "Epochs"):
     # 1. Setup the main plot (Left Y-axis for Loss)
@@ -113,3 +119,6 @@ def eval_model_correctness(confusion_matrix):
          ),
         dim = 1
     )
+
+if __name__ == "__main__":
+    data = get_data_from_config()
