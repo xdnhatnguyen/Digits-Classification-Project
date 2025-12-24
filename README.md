@@ -51,8 +51,8 @@ digits_classification/
 │   ├── trainer.py      # Training script
 │   └── utils.py        # Utilities (Visualization, reading from config.yaml, etc)
 ├── model               # Directory for saving trained model weights
-├── main.py             # Perform all the training, validating and result visualization processes defined in 'src/'      
-├── app.py              # Perform a demo of both models
+├── main.py             # Perform all the training, validating and result visualizing steps defined in 'src/'      
+├── app.py              # Play a demo of both models
 ├── requirements.txt    # Project dependencies
 └── README.md           # Project documentation
 ```  
@@ -104,6 +104,7 @@ Lab Instructor: Mr. Lê Đức Khoan.
 
 ## 📝 License
 This project is distributed under the MIT license.
+
 
 
 
