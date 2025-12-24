@@ -18,7 +18,7 @@ The project is accompanied by a detailed scientific report, providing an in-dept
 
 * **Modular Architecture:** Clear separation between Data Loading, Model, Loss function, and Training loop.
 * **Multi-Architecture Support:**
-    * **MLP (Multi-layer Perceptron):**Fully Connected Neural Network, Basic Feed-Forward Network (Baseline).
+    * **MLP (Multi-layer Perceptron):** Fully Connected Neural Network, Basic Feed-Forward Network (Baseline).
     * **CNN (Convolutional Neural Network):** Convolutional network optimized for spatial feature extraction.
 * **Reproducibility:** Hyperparameter management via `yaml` configuration files.
 * **Logging & Visualization:** Real-time loss/accuracy tracking and prediction visualization.
@@ -86,7 +86,7 @@ python test.py --model_path saved_models/best_model.pth
 
 | Members | StudentID |
 | :--- | :--- |
-| Trần Trung Hậu | 2510215 |
+| Nguyễn Minh Nhật | 25120215 |
 | Vũ Thanh Phong | 25120219 |
 | Đỗ Lê Nhật Quang | 25120223 |
 | Nguyễn Phú Quang | 25120224 |
