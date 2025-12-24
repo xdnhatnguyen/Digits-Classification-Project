@@ -2,7 +2,7 @@
 
 > Course Project **Introduction to Information Technology** > **Faculty of Information Technology - VNU-HCM University of Science**
 
-This project implements and compares the performance of Deep Learning models (MLP & CNN) for handwritten digit recognition using the MNIST dataset. The project is built with a modular architecture, designed for extensibility and academic research purposes.
+This project implements and compares the performance of Deep Learning models (MLP & CNN) for handwritten digit recognition using the MNIST dataset. The project is built with a modular architecture, designed for extensibility and academic research purposes
 
 ---
 
@@ -27,7 +27,7 @@ The project is accompanied by a detailed scientific report, providing an in-dept
 
 Below is the implementation progress and task distribution of the team throughout the development process:
 
-![Gantt Chart](./Gantt.png)
+![Gantt Chart](./assets/Gantt.png)
 
 ---
 
