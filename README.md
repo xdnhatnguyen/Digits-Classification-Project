@@ -27,6 +27,8 @@ Below is the implementation progress and task distribution of the team throughou
 
 ![Gantt Chart](./Gantt.png)
 
+---
+
 ## 📂 Project Structure
 
 ```bash
@@ -47,6 +49,7 @@ digits_classification/
 ├── requirements.txt    # Project dependencies
 └── README.md           # Project documentation
 ```  
+---
 ## 🚀 Installation & Usage  
 ### 1. Environment Setup  
 Requires Python 3.8+.
@@ -74,6 +77,24 @@ Evaluate the model on the Test set:
 ```bash
 python test.py --model_path saved_models/best_model.pth
 ```
+---
+## 👥 Researchers:
+
+### HCMUS - GROUP THỢ ĐIỆN VIẾT CODE - 25CTT3
+
+| Thành viên | MSSV |
+| :--- | :--- |
+| Trần Trung Hậu | 2510215 |
+| Vũ Thanh Phong | 25120219 |
+| Đỗ Lê Nhật Quang | 25120223 |
+| Nguyễn Phú Quang | 25120224 |
+| Nguyễn Vũ Nhật Quang | 25120225 |
+| Phạm Đăng Quang | 25120226 |
+
+Giảng viên hướng dẫn thực hành: Thầy Lê Đức Khoan.
+
+---
+
 ## 📝 License
 This project is distributed under the MIT license.
 
