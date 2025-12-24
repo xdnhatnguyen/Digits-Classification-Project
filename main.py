@@ -84,14 +84,16 @@ if __name__ == "__main__":
                          list_2=eval_data[1][0],
                          name_1="MLP Model",
                          name_2="CNN Model",
-                         title="Loss over time")
+                         title="Loss over time",
+                         x_label_name="50-batches")
     
     """ IN RA KẾT QUẢ HUẤN LUYỆN MÔ HÌNH CNN """ 
     src.utils.plot_graph(list_1=eval_data[0][1],
                          list_2=eval_data[1][1],
                          name_1="MLP Model",
                          name_2="CNN Model",
-                         title="Accuracy over time")
+                         title="Accuracy over time",
+                         x_label_name="Epoch")
 
     """ IN RA BẢNG CONFUSION CỦA MÔ HÌNH """
     src.utils.plot_confusion_matrix(cm_tensor=src.utils.eval_model_correctness(eval_data[0][2]),

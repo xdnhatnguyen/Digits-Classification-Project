@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 
-def plot_graph(list_1, list_2, name_1, name_2, title):
+def plot_graph(list_1, list_2, name_1, name_2, title, x_label_name = "Epochs"):
     # 1. Setup the main plot (Left Y-axis for Loss)
     fig, ax1 = plt.subplots(figsize=(10, 6))
     
@@ -11,8 +11,8 @@ def plot_graph(list_1, list_2, name_1, name_2, title):
     x_1 = list(range(len(list_1)))
     
     # Plot Loss (Red line)
-    ax1.set_xlabel(name_1)
-    ax1.set_ylabel('Loss', color='tab:red')
+    ax1.set_xlabel(x_label_name)
+    ax1.set_ylabel(name_1, color='tab:red')
     ax1.plot(x_1, list_1, color='tab:red', label=name_1)
     ax1.tick_params(axis='y', labelcolor='tab:red')
 
