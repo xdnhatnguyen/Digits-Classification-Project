@@ -35,19 +35,24 @@ Below is the implementation progress and task distribution of the team throughou
 
 ```bash
 digits_classification/
+├── docs/            # Configuration files
+│   └── article_paper.pdf     # Scientific report file
 ├── configs/            # Configuration files
 │   └── config.yaml     # Main config (Epochs, LR, Model type...)
 ├── assets/             # Image files
 │   └── GanttChart.png
+│   └── Figure_1.png    # A graph that compares loss over time between the two models during training
+│   └── Figure_2.png    # A graph that compares accuracy over time between the two models after every epoch
+│   └── Figure_3.png    # An evaluation table for the MLP Model
+│   └── Figure_4.png    # An evaluation table for the CNN Model
 ├── src/                # Source code
-│   ├── data/           # Data processing module (DataLoader, Transforms)
-│   ├── models/         # Model architecture definitions (CNN, MLP)
-│   ├── losses/         # Loss functions
-│   └── utils/          # Utilities (Visualization, Logger)
-├── saved_models/       # Directory for saving trained model weights
-├── article_paper.pdf   # Scientific report file
-├── trainer.py          # Training script
-├── test.py             # Testing/Evaluation script
+│   ├── dataloader.py   # Data processing module (DataLoader, Transforms)
+│   ├── model.py        # Model architecture definitions (CNN, MLP)
+│   ├── trainer.py      # Training script
+│   └── utils.py        # Utilities (Visualization, reading from config.yaml, etc)
+├── model               # Directory for saving trained model weights
+├── main.py             # Perform all the training, validating and result visualization processes defined in 'src/'      
+├── app.py              # Perform a demo of both models
 ├── requirements.txt    # Project dependencies
 └── README.md           # Project documentation
 ```  
@@ -93,10 +98,11 @@ python test.py --model_path saved_models/best_model.pth
 | Nguyễn Vũ Nhật Quang | 25120225 |
 | Phạm Đăng Quang | 25120226 |
 
-Lab Instructor: Thầy Lê Đức Khoan.
+Lab Instructor: Mr. Lê Đức Khoan.
 
 ---
 
 ## 📝 License
 This project is distributed under the MIT license.
+
 
