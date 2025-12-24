@@ -10,7 +10,7 @@ This project implements and compares the performance of Deep Learning models (ML
 
 The project is accompanied by a detailed scientific report, providing an in-depth analysis of the mathematical foundations and empirical evaluation.
 
-👉 **[Read the full report (PDF)](./article_paper.pdf)**
+👉 **[Read the full report (PDF)](./docs/article_paper.pdf)**
 
 ---
 
@@ -104,5 +104,6 @@ Lab Instructor: Mr. Lê Đức Khoan.
 
 ## 📝 License
 This project is distributed under the MIT license.
+
 
 
