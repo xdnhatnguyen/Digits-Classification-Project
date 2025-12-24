@@ -1,0 +1,12 @@
+training:
+  epochs: 5
+  learning_rate: 0.001
+  batch_size: 64
+model:
+  input_size: 784
+  num_classes: 10
+  mlp_layers: [256, 128]
+  cnn_layers: [32, 64, 128]
+paths:
+  train_data: "./data/train.csv"
+  test_data: "./data/test.csv"
