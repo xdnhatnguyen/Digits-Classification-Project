@@ -91,19 +91,20 @@ python test.py --model_path saved_models/best_model.pth
 
 | Members | StudentID |
 | :--- | :--- |
-| Nguyễn Minh Nhật | 25120215 |
-| Vũ Thanh Phong | 25120219 |
-| Đỗ Lê Nhật Quang | 25120223 |
-| Nguyễn Phú Quang | 25120224 |
-| Nguyễn Vũ Nhật Quang | 25120225 |
-| Phạm Đăng Quang | 25120226 |
+| Nguyen Minh Nhat | 25120215 |
+| Vu Thanh Phong | 25120219 |
+| Do Le Nhat Quang | 25120223 |
+| Nguyen Phu Quang | 25120224 |
+| Nguyen Vu Nhat Quang | 25120225 |
+| Pham Dang Quang | 25120226 |
 
-Lab Instructor: Mr. Lê Đức Khoan.
+Lab Instructor: Mr. Le Duc Khoan.
 
 ---
 
 ## 📝 License
 This project is distributed under the MIT license.
+
 
 
 
