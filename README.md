@@ -35,8 +35,8 @@ Below is the implementation progress and task distribution of the team throughou
 
 ```bash
 digits_classification/
-├── docs/            # Configuration files
-│   └── article_paper.pdf     # Scientific report file
+├── docs/               # Project documentation
+│   └── article_paper.pdf # Scientific report file
 ├── configs/            # Configuration files
 │   └── config.yaml     # Main config (Epochs, LR, Model type...)
 ├── assets/             # Image files
@@ -54,7 +54,7 @@ digits_classification/
 ├── main.py             # Perform all the training, validating and result visualizing steps defined in 'src/'      
 ├── app.py              # Play a demo of both models
 ├── requirements.txt    # Project dependencies
-└── README.md           # Project documentation
+└── README.md           # README file
 ```  
 ---
 ## 🚀 Installation & Usage  
@@ -104,6 +104,7 @@ Lab Instructor: Mr. Le Duc Khoan.
 
 ## 📝 License
 This project is distributed under the MIT license.
+
 
 
 
