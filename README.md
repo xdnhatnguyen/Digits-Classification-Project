@@ -99,10 +99,11 @@ python app.py
 #### Demo Preview  
 A demonstration of the real-time digit recognition process.
 <p align="center">
-  <img src="assets/demo.gif" alt="Gradio Demo" width="600px">
+  <video src="assets/demo.mp4" width="700px" autoplay loop muted title="Gradio Demo">
+  </video>
   <br>
-  <i>Figure 1: Real-time inference demo. The system processes $28 \times 28$ handwritten inputs and provides instantaneous classification scores.</i>
-</p>
+  <i>Figure 1: Real-time inference demo showing model predictions.</i>
+</p>  
 #### 🔍 Side-by-Side Comparison: MLP vs. CNN
 As discussed in our analysis, the MLP model often struggles with subtle geometric variations due to its flattened input. In contrast, the CNN leverages convolutional filters to maintain spatial correlations.
 
@@ -127,6 +128,7 @@ Lab Instructor: Mr. Le Duc Khoan.
 
 ## 📝 License
 This project is distributed under the MIT license.
+
 
 
 
