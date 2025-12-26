@@ -7,3 +7,4 @@ omegaconf
 seaborn
 gradio
 opencv-python
+pyyaml

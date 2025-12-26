@@ -1,5 +1,5 @@
 import torch
-from src.utils import add_confusion_matrix
+import src.utils
 
 # Train Loop
 def train(model, loaders, epoch, optimizer, loss_fn, device):
@@ -34,7 +34,7 @@ def valid(model, loaders, device, loss_fn, confusion_matrix):
             data, target = data.to(device), target.to(device)
             output = model(data)
             pred = output.argmax(dim=1, keepdim=True)
-            confusion_matrix += add_confusion_matrix(output, target)
+            confusion_matrix += src.utils.add_confusion_matrix(output, target)
             correct += pred.eq(target.view_as(pred)).sum().item() #đánh dấu bỏ
     accuracy.append(float(correct)/float(total))
     return accuracy

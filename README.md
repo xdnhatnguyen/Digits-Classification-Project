@@ -1,6 +1,8 @@
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![Python](https://img.shields.io/badge/python-3.8+-blue.svg?style=for-the-badge&logo=python&logoColor=white) ![License](https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge)
 
-This project implements and compares the performance of Deep Learning models (MLP & CNN) for handwritten digit recognition using the MNIST dataset. The project is built with a modular architecture, designed for extensibility and academic research purposes.
+> Course Project **Introduction to Information Technology** > **Faculty of Information Technology - VNU-HCM University of Science**
+
+This project implements and compares the performance of Deep Learning models (MLP & CNN) for handwritten digit recognition using the MNIST dataset. The project is built with a modular architecture, designed for extensibility and academic research purposes
 
 ---
 
@@ -8,7 +10,7 @@ This project implements and compares the performance of Deep Learning models (ML
 
 The project is accompanied by a detailed scientific report, providing an in-depth analysis of the mathematical foundations and empirical evaluation.
 
-👉 **[Read the full report (PDF)](./article_paper.pdf)**
+👉 **[Read the full report (PDF)](./docs/article_paper.pdf)**
 
 ---
 
@@ -16,7 +18,7 @@ The project is accompanied by a detailed scientific report, providing an in-dept
 
 * **Modular Architecture:** Clear separation between Data Loading, Model, Loss function, and Training loop.
 * **Multi-Architecture Support:**
-    * **MLP (Multi-layer Perceptron):**Fully Connected Neural Network, Basic Feed-Forward Network (Baseline).
+    * **MLP (Multi-layer Perceptron):** Fully Connected Neural Network, Basic Feed-Forward Network (Baseline).
     * **CNN (Convolutional Neural Network):** Convolutional network optimized for spatial feature extraction.
 * **Reproducibility:** Hyperparameter management via `yaml` configuration files.
 * **Logging & Visualization:** Real-time loss/accuracy tracking and prediction visualization.
@@ -25,28 +27,36 @@ The project is accompanied by a detailed scientific report, providing an in-dept
 
 Below is the implementation progress and task distribution of the team throughout the development process:
 
-![Gantt Chart](./Gantt.png)
+![Gantt Chart](./assets/Gantt.png)
+
+---
 
 ## 📂 Project Structure
 
 ```bash
 digits_classification/
+├── docs/               # Project documentation
+│   └── article_paper.pdf # Scientific report file
 ├── configs/            # Configuration files
 │   └── config.yaml     # Main config (Epochs, LR, Model type...)
 ├── assets/             # Image files
 │   └── GanttChart.png
+│   └── Figure_1.png    # A graph that compares loss over time between the two models during training
+│   └── Figure_2.png    # A graph that compares accuracy over time between the two models after every epoch
+│   └── Figure_3.png    # An evaluation table for the MLP Model
+│   └── Figure_4.png    # An evaluation table for the CNN Model
 ├── src/                # Source code
-│   ├── data/           # Data processing module (DataLoader, Transforms)
-│   ├── models/         # Model architecture definitions (CNN, MLP)
-│   ├── losses/         # Loss functions
-│   └── utils/          # Utilities (Visualization, Logger)
-├── saved_models/       # Directory for saving trained model weights
-├── article_paper.pdf   # Scientific report file
-├── trainer.py          # Training script
-├── test.py             # Testing/Evaluation script
+│   ├── dataloader.py   # Data processing module (DataLoader, Transforms)
+│   ├── model.py        # Model architecture definitions (CNN, MLP)
+│   ├── trainer.py      # Training script
+│   └── utils.py        # Utilities (Visualization, reading from config.yaml, etc)
+├── model               # Directory for saving trained model weights
+├── main.py             # Perform all the training, validating and result visualizing steps defined in 'src/'      
+├── app.py              # Play a demo of both models
 ├── requirements.txt    # Project dependencies
-└── README.md           # Project documentation
+└── README.md           # README file
 ```  
+---
 ## 🚀 Installation & Usage  
 ### 1. Environment Setup  
 Requires Python 3.8+.
@@ -74,6 +84,29 @@ Evaluate the model on the Test set:
 ```bash
 python test.py --model_path saved_models/best_model.pth
 ```
+---
+## 👥 Researchers:
+
+### HCMUS - CONCHOCAOBANGBOPC - 25CTT3
+
+| Members | StudentID |
+| :--- | :--- |
+| Nguyen Minh Nhat | 25120215 |
+| Vu Thanh Phong | 25120219 |
+| Do Le Nhat Quang | 25120223 |
+| Nguyen Phu Quang | 25120224 |
+| Nguyen Vu Nhat Quang | 25120225 |
+| Pham Dang Quang | 25120226 |
+
+Lab Instructor: Mr. Le Duc Khoan.
+
+---
+
 ## 📝 License
 This project is distributed under the MIT license.
+
+
+
+
+
 

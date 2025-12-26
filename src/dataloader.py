@@ -2,6 +2,7 @@ import torch
 from torchvision import datasets, transforms
 from torchvision.transforms import ToTensor
 from torch.utils.data import random_split, DataLoader
+import src.utils
 
 def Transforms():
     return transforms.Compose([
@@ -10,6 +11,9 @@ def Transforms():
     ])
 
 def getLoaders():
+
+    yaml_data = src.utils.get_data_from_config()
+
     # datasets.MNIST.mirrors = ["https://ossci-datasets.s3.amazonaws.com/mnist/"]
     full_train_data = datasets.MNIST(  # tham số khởi tạo root, train, transform, download.
         root='data',            # chỉ định folder nơi dataset sẽ được tải, lưu
@@ -35,9 +39,9 @@ def getLoaders():
     image, label = train_data[0]
     
     loaders = {
-        'train': DataLoader(train_data, batch_size=64, shuffle=True, num_workers=2),
-        'valid': DataLoader(valid_data, batch_size=64, shuffle=True, num_workers=2),
-        'test' : DataLoader(test_data, batch_size=64, shuffle=True, num_workers=2)
+        'train': DataLoader(train_data, batch_size=int(yaml_data["BATCH_SIZE"]), shuffle=True, num_workers=2),
+        'valid': DataLoader(valid_data, batch_size=int(yaml_data["BATCH_SIZE"]), shuffle=True, num_workers=2),
+        'test' : DataLoader(test_data, batch_size=int(yaml_data["BATCH_SIZE"]), shuffle=True, num_workers=2)
     }
 
     return loaders
