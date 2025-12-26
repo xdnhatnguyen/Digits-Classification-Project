@@ -47,7 +47,7 @@ digits_classification/
 │   └── Figure_4.png                # An evaluation table for the CNN Model
 │   └── cnn_interface.png           # User interface for the CNN Model
 │   └── mlp_interface.png           # User interface for the CNN Model
-│   └── demo.gif                    # Interactive Demo
+│   └── demo.mp4                    # Interactive Demo
 │   └── cnn_confusion_matrix.pdf    # A confusion matrix for CNN Model
 │   └── mlp_confusion_matrix.pdf    # A confusion matrix for MLP Model
 │   └── mnist_samples_high_res.pdf  # Samples of the MNIST dataset
@@ -99,15 +99,17 @@ python app.py
 #### Demo Preview  
 A demonstration of the real-time digit recognition process.
 <p align="center">
-  <video src="assets/demo.mp4" width="700px" autoplay loop muted title="Gradio Demo">
+  <video src="https://github.com/user-attachments/assets/031d2be2-56bb-4402-8393-782c79fc0de9" width="700px" autoplay loop muted title="Gradio Demo">
   </video>
   <br>
   <i>Figure 1: Real-time inference demo showing model predictions.</i>
 </p>  
-#### 🔍 Side-by-Side Comparison: MLP vs. CNN
+
+#### Side-by-Side Comparison: MLP vs. CNN
 As discussed in our analysis, the MLP model often struggles with subtle geometric variations due to its flattened input. In contrast, the CNN leverages convolutional filters to maintain spatial correlations.
 
 <table style="width: 100%; border-collapse: collapse;"> <tr> <td align="center" width="50%"><b>Multi-Layer Perceptron (MLP)</b></td> <td align="center" width="50%"><b>Convolutional Neural Network (CNN)</b></td> </tr> <tr> <td><img src="assets/mlp_interface.png" alt="MLP Interface" width="100%"></td> <td><img src="assets/cnn_interface.png" alt="CNN Interface" width="100%"></td> </tr> <tr> <td align="center"><i>MLP result showing higher ambiguity in probabilities</i></td> <td align="center"><i>CNN result showing robust spatial feature extraction</i></td> </tr> </table>
+
 ---
 ## 👥 Researchers:
 
@@ -128,6 +130,7 @@ Lab Instructor: Mr. Le Duc Khoan.
 
 ## 📝 License
 This project is distributed under the MIT license.
+
 
 
 
