@@ -36,7 +36,7 @@ Below is the implementation progress and task distribution of the team throughou
 ```bash
 digits_classification/
 ├── docs/               # Project documentation
-│   └── article_paper.pdf # Scientific report file
+│   └── final_article.pdf # Scientific report file
 ├── configs/            # Configuration files
 │   └── config.yaml     # Main config (Epochs, LR, Model type...)
 ├── assets/             # Image files
@@ -45,13 +45,16 @@ digits_classification/
 │   └── Figure_2.png    # A graph that compares accuracy over time between the two models after every epoch
 │   └── Figure_3.png    # An evaluation table for the MLP Model
 │   └── Figure_4.png    # An evaluation table for the CNN Model
+│   └── cnn_confusion_matrix.pdf    # A confusion matrix for CNN Model
+│   └── mlp_confusion_matrix.pdf    # A confusion matrix for MLP Model
+│   └── mnist_samples_high_res.pdf  # Samples of the MNIST dataset
 ├── src/                # Source code
 │   ├── dataloader.py   # Data processing module (DataLoader, Transforms)
 │   ├── model.py        # Model architecture definitions (CNN, MLP)
 │   ├── trainer.py      # Training script
 │   └── utils.py        # Utilities (Visualization, reading from config.yaml, etc)
 ├── model               # Directory for saving trained model weights
-├── main.py             # Perform all the training, validating and result visualizing steps defined in 'src/'      
+├── main.py             # Perform all the training, validating, and result visualizing steps defined in 'src/.'      
 ├── app.py              # Play a demo of both models
 ├── requirements.txt    # Project dependencies
 └── README.md           # README file
@@ -104,6 +107,7 @@ Lab Instructor: Mr. Le Duc Khoan.
 
 ## 📝 License
 This project is distributed under the MIT license.
+
 
 
 
